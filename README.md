@@ -1,1 +1,31 @@
-half-life-alyx-teslasuit-experience
+# Half-Life Alyx Teslasuit Experience
+
+Application for haptic feedback with Teslasuit for Half-Life Alyx game. Haptic feedback generation based on stream of feedback events and game state from console.
+
+## Setup Environment
+1. Install Teslasuit Studio build #18791 or higher - https://gitlab.vrweartek.com/software/teslasuit-studio/-/pipelines.
+2. Install Steam and Half-Life Alyx game from it - https://store.steampowered.com/.
+3. Download the following folder - https://gitlab.vrweartek.com/a.belekhow/half-life-alyx-teslasuit-experience/-/tree/master/TeslasuitAlyx/bin/Release
+
+## Configuration 1
+1. Set launch option for Half-Life Alyx in game properties in steam: "-netconport 2121".
+2. Run Half-Life Alyx game
+3. Run TeslasuitAlyx.exe
+
+## Configuration 2
+1. Run TeslasuitAlyx.exe and wait while game will run.
+
+## Running
+1. Connect calibrated Teslasuit to PC.
+2. Run Half-Life Alyx game or TeslasuitAlyx.exe.
+
+## Troubleshooting
+If there are message with text "**Failed to init game prerequisites. Game dir not found.**", add **-path path/to/the/game** option to TeslastuitAlyx.exe
+
+## Development
+-
+
+### Project structure
+-
+
+### Links
