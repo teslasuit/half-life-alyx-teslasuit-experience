@@ -61,7 +61,7 @@ namespace TeslasuitAlyx
                 }
                 catch (Exception)
                 {
-                    Console.WriteLine($"Connection timeout. Make sure that hlvr is running with -netconport {DEFAULT_PORT} arg");
+                    Console.WriteLine($"Connection timeout. Make sure that hlvr is running with -netconport {cfg.port} arg");
                 }
             }
 
