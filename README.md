@@ -15,12 +15,19 @@ Application for haptic feedback with Teslasuit for Half-Life Alyx game. Haptic f
 ## Configuration 2
 1. Run TeslasuitAlyx.exe and wait while game will run.
 
+## Command line arguments
+_**-port**_ Port used by telnet connection (_**2121**_ by default)
+_**-appid**_ Steam application id reserved for Half-Life Alyx game (546560 by default)
+_**-path**_ Path to Half-Life Alyx game directory
+_**-filename**_ Half-Life Alyx game executable name (_**hlvr**_ by default)
+
+
 ## Running
 1. Connect calibrated Teslasuit to PC.
 2. Run Half-Life Alyx game or TeslasuitAlyx.exe.
 
 ## Troubleshooting
-If there are message with text "**Failed to init game prerequisites. Game dir not found.**", add **-path path/to/the/game** option to TeslastuitAlyx.exe
+If there are message with text "**Failed to init game prerequisites. Game dir not found.**", add **-path path/to/the/game/dir** option to TeslastuitAlyx.exe
 
 ## Development
 -
