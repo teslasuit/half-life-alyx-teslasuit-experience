@@ -218,7 +218,7 @@ namespace TeslasuitAlyx
                     if (!feedback.DontReplay || (feedback.DontReplay && !playable.IsPlaying))
                     {
                         Console.WriteLine($"Playing {anim.animName}");
-                        //CurrentPlayer.Play(playable);
+                        CurrentPlayer.Play(playable);
                     }
                 }
                 else
@@ -243,7 +243,7 @@ namespace TeslasuitAlyx
                 {
                     Console.WriteLine($"Stopping {anim.animName}");
                     var playable = m_assetManager.GetPlayable(CurrentPlayer.Device, anim.hapticAsset);
-                    //CurrentPlayer.Stop(playable);
+                    CurrentPlayer.Stop(playable);
                 }
                 else
                 {
