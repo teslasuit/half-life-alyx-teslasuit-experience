@@ -7,7 +7,7 @@ namespace TeslasuitAlyx
         public float Angle { get; }
         public float Height { get; }
         public float Multiplier { get; }
-        public bool Overwrite { get; }
+        public bool DontReplay { get; }
 
         public HLAlyxFeedbackEventArgs(HLAlyxFeedbackType feedbackType)
         {
@@ -15,21 +15,21 @@ namespace TeslasuitAlyx
             Angle = 0;
             Height = 0;
             Multiplier = 0;
-            Overwrite = false;
+            DontReplay = false;
         }
 
-        public HLAlyxFeedbackEventArgs(HLAlyxFeedbackType feedbackType, float angle, float height, float multiplier, bool overwrite)
+        public HLAlyxFeedbackEventArgs(HLAlyxFeedbackType feedbackType, float angle, float height, float multiplier, bool dontReplay)
         {
             FeedbackType = feedbackType;
             Angle = angle;
             Height = height;
             Multiplier = multiplier;
-            Overwrite = overwrite;
+            DontReplay = dontReplay;
         }
 
         public override string ToString()
         {
-            return $"Type: {FeedbackType}, Angle: {Angle}, Height: {Height}, Multiplier: {Multiplier}, Overwrite: {Overwrite}";
+            return $"Type: {FeedbackType}, Angle: {Angle}, Height: {Height}, Multiplier: {Multiplier}, Overwrite: {DontReplay}";
         }
     }
 }

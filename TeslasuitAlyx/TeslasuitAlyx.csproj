@@ -102,9 +102,8 @@
     <None Include="animations\ClipInsertedLeft.ts_asset">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="animations\DeafultDamage.ts_asset">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <None Include="animations\DefaultDamage.ts_asset" />
+    <None Include="animations\EnvironmentFire.ts_asset" />
     <None Include="animations\GravityGloveCatch.ts_asset">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

@@ -950,7 +950,7 @@ end
 
 function TryStopListeningToGameEvent(event_handle)
   if event_handle ~=nil then
-    TryStopListeningToGameEvent(event_handle)
+    StopListeningToGameEvent(event_handle)
   end
 end
 

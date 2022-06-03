@@ -203,6 +203,7 @@ namespace TeslasuitAlyx
                 if (!anim.enabled)
                 {
                     Console.WriteLine($"No asset with filename: {anim.animName}. Skipping...");
+                    TryDefaultDamagePlay(feedback);
                     return;
                 }
                 if (CurrentPlayer != null && anim.hapticAsset != null)
@@ -214,7 +215,7 @@ namespace TeslasuitAlyx
                     playable.SetMultiplier(multiplierPW);
                     playable.SetMultiplier(multiplierA);
 
-                    if (feedback.Overwrite || (feedback.Overwrite && !playable.IsPlaying))
+                    if (!feedback.DontReplay || (feedback.DontReplay && !playable.IsPlaying))
                     {
                         Console.WriteLine($"Playing {anim.animName}");
                         //CurrentPlayer.Play(playable);
@@ -225,18 +226,8 @@ namespace TeslasuitAlyx
                     Console.WriteLine($"Failed to play {anim.animName}: No device found.");
                 }
             }
-            else if ((feedback.FeedbackType >= HLAlyxFeedbackType.EnemyWithoutGunBegin && feedback.FeedbackType <= HLAlyxFeedbackType.EnemyWithoutGunEnd) ||
-                    (feedback.FeedbackType >= HLAlyxFeedbackType.EnemyWithGunBegin && feedback.FeedbackType <= HLAlyxFeedbackType.EnemyWithGunEnd))
-            {
-                if (feedback.FeedbackType == HLAlyxFeedbackType.DefaultDamage)
-                {
-                    return;
-                }
-                feedback = new HLAlyxFeedbackEventArgs(HLAlyxFeedbackType.DefaultDamage, feedback.Angle, feedback.Height, feedback.Multiplier, feedback.Overwrite);
-                Play(feedback);
-            }
         }
-
+        
         public void Stop(HLAlyxFeedbackEventArgs feedback)
         {
             if (feedbackMap.TryGetValue(feedback.FeedbackType, out var anim))
@@ -244,6 +235,7 @@ namespace TeslasuitAlyx
                 if (!anim.enabled)
                 {
                     Console.WriteLine($"No asset with filename: {anim.animName}. Skipping...");
+                    TryDefaultDamageStop(feedback);
                     return;
                 }
 
@@ -258,15 +250,35 @@ namespace TeslasuitAlyx
                     Console.WriteLine($"Failed to play {anim.animName}: No device found.");
                 }
             }
-            else if ((feedback.FeedbackType >= HLAlyxFeedbackType.EnemyWithoutGunBegin && feedback.FeedbackType <= HLAlyxFeedbackType.EnemyWithoutGunEnd) ||
-                    (feedback.FeedbackType >= HLAlyxFeedbackType.EnemyWithGunBegin && feedback.FeedbackType <= HLAlyxFeedbackType.EnemyWithGunEnd))
+        }
+
+        public void TryDefaultDamagePlay(HLAlyxFeedbackEventArgs feedback)
+        {
+            if (feedback.FeedbackType == HLAlyxFeedbackType.DefaultDamage)
             {
-                if (feedback.FeedbackType == HLAlyxFeedbackType.DefaultDamage)
-                {
-                    return;
-                }
-                feedback = new HLAlyxFeedbackEventArgs(HLAlyxFeedbackType.DefaultDamage, feedback.Angle, feedback.Height, feedback.Multiplier, feedback.Overwrite);
-                Stop(feedback);
+                return;
+            }
+
+            if ((feedback.FeedbackType >= HLAlyxFeedbackType.EnemyWithoutGunBegin && feedback.FeedbackType <= HLAlyxFeedbackType.EnemyWithoutGunEnd) ||
+                (feedback.FeedbackType >= HLAlyxFeedbackType.EnemyWithGunBegin && feedback.FeedbackType <= HLAlyxFeedbackType.EnemyWithGunEnd))
+            {
+                feedback = new HLAlyxFeedbackEventArgs(HLAlyxFeedbackType.DefaultDamage, feedback.Angle, feedback.Height, feedback.Multiplier, feedback.DontReplay);
+                Play(feedback);
+            }
+        }
+
+        public void TryDefaultDamageStop(HLAlyxFeedbackEventArgs feedback)
+        {
+            if (feedback.FeedbackType == HLAlyxFeedbackType.DefaultDamage)
+            {
+                return;
+            }
+
+            if ((feedback.FeedbackType >= HLAlyxFeedbackType.EnemyWithoutGunBegin && feedback.FeedbackType <= HLAlyxFeedbackType.EnemyWithoutGunEnd) ||
+                (feedback.FeedbackType >= HLAlyxFeedbackType.EnemyWithGunBegin && feedback.FeedbackType <= HLAlyxFeedbackType.EnemyWithGunEnd))
+            {
+                feedback = new HLAlyxFeedbackEventArgs(HLAlyxFeedbackType.DefaultDamage, feedback.Angle, feedback.Height, feedback.Multiplier, feedback.DontReplay);
+                Play(feedback);
             }
         }
 
