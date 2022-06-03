@@ -243,7 +243,10 @@ namespace TeslasuitAlyx
                 {
                     Console.WriteLine($"Stopping {anim.animName}");
                     var playable = m_assetManager.GetPlayable(CurrentPlayer.Device, anim.hapticAsset);
-                    CurrentPlayer.Stop(playable);
+                    if (playable.IsPlaying)
+                    {
+                        CurrentPlayer.Stop(playable);
+                    }
                 }
                 else
                 {
