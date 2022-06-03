@@ -221,7 +221,7 @@ namespace TeslasuitAlyx
                 var alyxCfg = File.ReadAllText(targetCfgPath);
                 if (!alyxCfg.Contains($"{ALYX_SCRIPT_RELOAD} {ALYX_SCRIPT_FILENAME}"))
                 {
-                    File.AppendAllLines(targetCfgPath, new[]{$"{ALYX_SCRIPT_RELOAD} {ALYX_SCRIPT_FILENAME}"});
+                    File.AppendAllLines(targetCfgPath, new[]{"\n", $"{ALYX_SCRIPT_RELOAD} {ALYX_SCRIPT_FILENAME}"});
                     Console.WriteLine($"{ALYX_CFG_FILENAME} updated.");
                 }
             }
