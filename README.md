@@ -17,7 +17,7 @@ Application for haptic feedback with Teslasuit for Half-Life Alyx game. Haptic f
 
 ## Command line arguments
 - _**-port**_ Port used by telnet connection (_**2121**_ by default)
-- _**-appid**_ Steam application id reserved for Half-Life Alyx game (546560 by default)
+- _**-appid**_ Steam application id reserved for Half-Life Alyx game (_**546560**_ by default)
 - _**-path**_ Path to Half-Life Alyx game directory
 - _**-filename**_ Half-Life Alyx game executable name (_**hlvr**_ by default)
 
