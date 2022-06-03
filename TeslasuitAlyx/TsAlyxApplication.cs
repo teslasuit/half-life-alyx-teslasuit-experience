@@ -144,13 +144,11 @@ namespace TeslasuitAlyx
 
         private void Vr_OnFeedbackStop(HLAlyxFeedbackEventArgs obj)
         {
-            Console.WriteLine($"=========Feedback stop: {obj}");
             player.Stop(obj);
         }
 
         private void Vr_OnFeedbackStart(HLAlyxFeedbackEventArgs obj)
         {
-            Console.WriteLine($"=========Feedback start: {obj}");
             player.Play(obj);
         }
 

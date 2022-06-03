@@ -8,7 +8,8 @@
         GunHead,
 
         //Unarmed Enemies
-        UnarmedBloater,
+        EnemyWithoutGunBegin,
+        UnarmedBloater = EnemyWithoutGunBegin,
         UnarmedHeadcrab,
         UnarmedHeadcrabArmored,
         UnarmedHeadcrabBlack, //Toxic
@@ -24,7 +25,7 @@
         UnarmedManhack,
 
         GrabbedByBarnacle,
-
+        EnemyWithoutGunEnd = GrabbedByBarnacle,
         //Grenade/Mine
         ConcussionGrenade,
         BugBaitGrenade,
@@ -35,7 +36,8 @@
         RollerMine,
 
         //Enemies with guns
-        Combine,
+        EnemyWithGunBegin,
+        Combine = EnemyWithGunBegin,
         CombineS,
 
         CombineGantry,
@@ -46,6 +48,7 @@
         Strider,
         Turret,
         FoliageTurret,
+        EnemyWithGunEnd = FoliageTurret,
 
         //On whole body
         EnvironmentExplosion,
