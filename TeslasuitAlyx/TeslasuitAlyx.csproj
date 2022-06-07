@@ -73,30 +73,26 @@
     <Compile Include="TsAlyxApplication.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="animations\BackpackRetrieveClip.ts_asset">
+    <None Include="animations\BackpackRetrieveClipRight.ts_asset">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="animations\BackpackRetrieveClipLeft.ts_asset">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="animations\BackpackRetrieveResin.ts_asset">
+    <None Include="animations\BackpackRetrieveResinRight.ts_asset">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="animations\BackpackRetrieveResinLeft.ts_asset">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="animations\BackpackStoreClip.ts_asset">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="animations\BackpackStoreClipLeft.ts_asset">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="animations\BackpackStoreResin.ts_asset">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <None Include="animations\BackpackStoreClipRight.ts_asset" />
     <None Include="animations\BackpackStoreResinLeft.ts_asset">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="animations\BackpackStoreResinRight.ts_asset" />
     <None Include="animations\ClipInserted.ts_asset">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

@@ -193,6 +193,10 @@ namespace TeslasuitAlyx
                     }
                     feedbackMap[feedback.feedbackType] = feedback;
                 }
+                else
+                {
+                    Console.WriteLine($"Cannot find event template for animation name: {animName}");
+                }
             }
         }
 
