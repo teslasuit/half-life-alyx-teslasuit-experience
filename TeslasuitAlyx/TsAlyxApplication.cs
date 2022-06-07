@@ -73,13 +73,7 @@ namespace TeslasuitAlyx
             {
                 SuitManager_OnSuitConnected(device);
             }
-
-            while(currentSuit == null)
-            {
-                Console.WriteLine("Waiting for device connection...");
-                Thread.Sleep(1000);
-            }
-
+            
             hl_console.Write($"{ALYX_SCRIPT_RELOAD} {ALYX_SCRIPT_FILENAME}");
 
             while (hl_console.IsConnected)
@@ -115,6 +109,9 @@ namespace TeslasuitAlyx
                     }
                 }
             }
+            hl_console.Release();
+            tsRoot.Dispose();
+            tsRoot = null;
             Console.WriteLine("HL Alyx disconnected.");
             return 0;
         }
