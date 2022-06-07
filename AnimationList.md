@@ -21,6 +21,7 @@
 - "UnarmedAntlionGuard"
 - "UnarmedManhack"
 
+
 - "GrabbedByBarnacle"
 
 ## Grenades
@@ -56,13 +57,13 @@
 - "DamageFire"
 - "DamageSpark"
 
-
 ## Shoot / throw events (this may not work)
 - "PlayerShootPistol"
 - "PlayerShootShotgun"
 - "PlayerShootSMG"
 - "PlayerShootDefault"
 - "PlayerGrenadeLaunch"
+
 
 - "PlayerShootPistolLeft"
 - "PlayerShootShotgunLeft"
@@ -75,13 +76,16 @@
 - "FallbackShotgun"
 - "FallbackSMG"
 
+
 - "FallbackPistolLeft"
 - "FallbackShotgunLeft"
 - "FallbackSMGLeft"
 
+
 - "KickbackPistol"
 - "KickbackShotgun"
 - "KickbackSMG"
+
 
 - "KickbackPistolLeft"
 - "KickbackShotgunLeft"
@@ -105,6 +109,7 @@
 - "ItemHolderStore"
 - "ItemHolderRemove"
 
+
 - "BackpackStoreClipLeft"
 - "BackpackStoreResinLeft"
 - "BackpackRetrieveClipLeft"
@@ -116,6 +121,7 @@
 - "GravityGloveLockOn"
 - "GravityGlovePull"
 - "GravityGloveCatch"
+
 
 - "GravityGloveLockOnLeft"
 - "GravityGlovePullLeft"
