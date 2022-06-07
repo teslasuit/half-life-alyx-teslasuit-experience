@@ -144,13 +144,13 @@
     <None Include="animations\HL Alyx assets.ts_project">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="animations\ItemHolderRemove .ts_asset">
+    <None Include="animations\ItemHolderRemove.ts_asset">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="animations\ItemHolderRemoveLeft.ts_asset">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="animations\ItemHolderStore .ts_asset">
+    <None Include="animations\ItemHolderStore.ts_asset">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="animations\ItemHolderStoreLeft.ts_asset">
