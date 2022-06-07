@@ -1,7 +1,11 @@
+# Half-Life Alyx Animation names list
+
+## Head
 - "DefaultHead"
 - "UnarmedHead"
 - "GunHead"
 
+## Unarmed enemies
 - "UnarmedBloater"
 - "UnarmedHeadcrab"
 - "UnarmedHeadcrabArmored"
@@ -19,6 +23,7 @@
 
 - "GrabbedByBarnacle"
 
+## Grenades
 - "ConcussionGrenade"
 - "BugBaitGrenade"
 - "FragGrenade"
@@ -27,6 +32,7 @@
 - "RollerGrenade"
 - "RollerMine"
 
+## Armed enemies
 - "Combine"
 - "CombineS"
 - "CombineGantry"
@@ -36,6 +42,7 @@
 - "Turret"
 - "FoliageTurret"
 
+## Environment
 - "EnvironmentExplosion"
 - "EnvironmentLaser"
 - "EnvironmentFire"
@@ -43,11 +50,14 @@
 - "EnvironmentPoison"
 - "EnvironmentRadiation"
 
+## Point damage
 - "DamageExplosion"
 - "DamageLaser"
 - "DamageFire"
 - "DamageSpark"
 
+
+## Shoot / throw events (this may not work)
 - "PlayerShootPistol"
 - "PlayerShootShotgun"
 - "PlayerShootSMG"
@@ -59,7 +69,8 @@
 - "PlayerShootSMGLeft"
 - "PlayerShootDefaultLeft"
 - "PlayerGrenadeLaunchLeft"
-- 
+
+## Fallback events
 - "FallbackPistol"
 - "FallbackShotgun"
 - "FallbackSMG"
@@ -76,14 +87,17 @@
 - "KickbackShotgunLeft"
 - "KickbackSMGLeft"
 
+## Low health
 - "HeartBeat"
 - "HeartBeatFast"
 
+## Healthing
 - "HealthPenUse"
 - "HealthStationUse"
 - "HealthStationUseLeftArm"
 - "HealthStationUseRightArm"
 
+## Backpack and items
 - "BackpackStoreClipRight"
 - "BackpackStoreResinRight"
 - "BackpackRetrieveClipRight"
@@ -98,6 +112,7 @@
 - "ItemHolderStoreLeft"
 - "ItemHolderRemoveLeft"
 
+## Gravity glove
 - "GravityGloveLockOn"
 - "GravityGlovePull"
 - "GravityGloveCatch"
@@ -106,13 +121,20 @@
 - "GravityGlovePullLeft"
 - "GravityGloveCatchLeft"
 
+## Weapon charging
 - "ClipInserted"
 - "ChamberedRound"
 - "ClipInsertedLeft"
-- "ChamberedR"Cough"
+- "ChamberedRoundLeft"
+
+## When player covers a mouth by hand
+- "Cough"
 - "CoughHead"
 
+## 
 - "ShockOnHandLeft"
 - "ShockOnHandRight"
 
+## Default damage
+Used when [Unarmed enemies](#unarmed-enemies) or [Armed enemies](#armed-enemies) animations is not set
 - "DefaultDamage"
