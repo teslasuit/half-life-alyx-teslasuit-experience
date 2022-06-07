@@ -127,14 +127,14 @@
 - "ClipInsertedLeft"
 - "ChamberedRoundLeft"
 
-## When player covers a mouth by hand
+## Covering a mouth with hand
 - "Cough"
 - "CoughHead"
 
-## 
+## Shocker usage
 - "ShockOnHandLeft"
 - "ShockOnHandRight"
 
 ## Default damage
-Used when [Unarmed enemies](#unarmed-enemies) or [Armed enemies](#armed-enemies) animations is not set
+Is used when [Unarmed enemies](#unarmed-enemies) or [Armed enemies](#armed-enemies) animations is not set.
 - "DefaultDamage"
