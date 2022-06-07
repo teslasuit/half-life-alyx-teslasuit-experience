@@ -58,7 +58,7 @@ Full animation names list supported by TeslasuitAlyx app. Should be placed in _/
 - "DamageFire"
 - "DamageSpark"
 
-## Shoot / throw events (not working now. See [Fallback](#fallback-events) or [Kickback](#kickback-events))
+## Shoot / throw events (<span data-color="red">Not working now.</span> See [Fallback](#fallback-events) or [Kickback](#kickback-events))
 - "PlayerShootPistol"
 - "PlayerShootShotgun"
 - "PlayerShootSMG"
