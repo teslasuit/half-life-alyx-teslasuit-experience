@@ -29,7 +29,7 @@ Application for haptic feedback with Teslasuit for Half-Life Alyx game. Haptic f
 If there are message with text "**Failed to init game prerequisites. Game dir not found.**", add **-path path/to/the/game/dir** option to TeslastuitAlyx.exe
 
 ## Animations List
-Full animation names list cann be found [here](/AnimationsList.md). 
+Full animation names list cann be found [here](/AnimationList.md). 
 
 ## Development
 -
