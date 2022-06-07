@@ -1,5 +1,8 @@
 # Half-Life Alyx Animation names list
 
+Full animation names list supported by TeslasuitAlyx app. Should be placed in _/animations_ directory with ***.tsasset** extension
+
+
 ## Head
 - "DefaultHead"
 - "UnarmedHead"
