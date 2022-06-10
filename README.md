@@ -10,10 +10,10 @@ Application for haptic feedback with Teslasuit for Half-Life Alyx game. Haptic f
 ## Configuration 1
 1. Set launch option for Half-Life Alyx in game properties in steam: `-console -netconport 2121`.
 2. Run Half-Life Alyx game
-3. Run **TeslasuitAlyx.exe**
+3. Run `TeslasuitAlyx.exe`
 
 ## Configuration 2
-1. Run **TeslasuitAlyx.exe** and wait while game will run.
+1. Run `TeslasuitAlyx.exe` and wait while game will run.
 
 ## Command line arguments
 - `-port` Port used by telnet connection (_**2121**_ by default)
@@ -28,13 +28,13 @@ Application for haptic feedback with Teslasuit for Half-Life Alyx game. Haptic f
 ## Troubleshooting
 If there are message with text `Failed to init game prerequisites. Game dir not found.`, add `-path path/to/the/game/dir` launch option to TeslastuitAlyx.exe:
 ### Way 1 (Shortcut)
-1. Create **shortcut** from TeslasuitAlyx.exe (Right click on TeslastuitAlyx.exe then _Create shortcut_)
+1. Create **shortcut** from `TeslasuitAlyx.exe` (Right click on `TeslasuitAlyx.exe` then _Create shortcut_)
 2. Right click on **shortcut**.
 3. Select _Properties_.
 4. In the appearing window find _Target_ text field and add `-path C:/Half Life Alyx` at the end of the line.
 
 ### Way 2 (Command line)
-1. Run cmd.exe in the directory with TeslasuitAlyx.exe
+1. Run cmd.exe in the directory with `TeslasuitAlyx.exe`
 2. write `Teslasuit.exe -path C:/Half Life Alyx`
 
 ## Animations List
