@@ -8,7 +8,7 @@ Application for haptic feedback with Teslasuit for Half-Life Alyx game. Haptic f
 3. Download binaries from this [folder](https://gitlab.vrweartek.com/a.belekhow/half-life-alyx-teslasuit-experience/-/tree/master/TeslasuitAlyx/bin/Release)
 
 ## Configuration 1
-1. Set launch option for Half-Life Alyx in game properties in steam: "-console -netconport 2121".
+1. Set launch option for Half-Life Alyx in game properties in steam: `-console -netconport 2121`.
 2. Run Half-Life Alyx game
 3. Run **TeslasuitAlyx.exe**
 
