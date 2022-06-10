@@ -27,13 +27,13 @@ Application for haptic feedback with Teslasuit for Half-Life Alyx game. Haptic f
 
 ## Troubleshooting
 If there are message with text `Failed to init game prerequisites. Game dir not found.`, add `-path path/to/the/game/dir` launch option to TeslastuitAlyx.exe:
-### Way 1
+### Way 1 (Shortcut)
 1. Create **shortcut** from TeslasuitAlyx.exe (Right click on TeslastuitAlyx.exe then _Create shortcut_)
 2. Right click on **shortcut**.
 3. Select _Properties_.
 4. In the appearing window find _Target_ text field and add `-path C:/Half Life Alyx` at the end of the line.
 
-### Way 2
+### Way 2 (Command line)
 1. Run cmd.exe in the directory with TeslasuitAlyx.exe
 2. write `Teslasuit.exe -path C:/Half Life Alyx`
 
