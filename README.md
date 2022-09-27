@@ -3,7 +3,7 @@
 Application for haptic feedback with Teslasuit for Half-Life Alyx game. Haptic feedback generation based on stream of feedback events and game state from console.
 
 ## Setup Environment
-1. Install Teslasuit Studio build #18791 or higher from [here](http://developer.teslasuit.io).
+1. Install latest Software Bundle [here](http://developer.teslasuit.io).
 2. Install [Steam](https://store.steampowered.com/) and Half-Life Alyx game.
 3. Download latest released binaries from the repository
 
