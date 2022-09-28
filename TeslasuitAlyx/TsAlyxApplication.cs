@@ -43,12 +43,12 @@ namespace TeslasuitAlyx
             var cfg = (Config)cfgObj;
             InitGame(cfg);
 
-            tsRoot = new TsRoot(false);
+            tsRoot = new TsRoot();
             hl_console = new HLAlyxTelnetConsole(cfg.port);
             eventProvider = new HLAlyxFeedbackEventProvider();
             cmdHandler = new HlAlyxCmdHandler(eventProvider);
             cmdParser = new HLAlyxCmdParser();
-            player = new TsFeedbackPlayer(tsRoot.HapticAssetManager);
+            player = new TsFeedbackPlayer(tsRoot.AssetManager);
             eventProvider.OnFeedbackStart += Vr_OnFeedbackStart;
             eventProvider.OnFeedbackStop += Vr_OnFeedbackStop;
 
