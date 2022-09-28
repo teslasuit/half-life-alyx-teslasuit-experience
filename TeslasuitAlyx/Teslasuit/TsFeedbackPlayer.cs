@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TsApi.Types;
+using TsAPI.Types;
 using TsSDK;
 
 namespace TeslasuitAlyx
@@ -15,7 +15,7 @@ namespace TeslasuitAlyx
 
         public IHapticPlayer CurrentPlayer { get; set; }
 
-        private IHapticAssetManager m_assetManager = null;
+        private IAssetManager m_assetManager = null;
 
         private Dictionary<HLAlyxFeedbackType, TsFeedbackAnimInfo> feedbackMap = new Dictionary<HLAlyxFeedbackType, TsFeedbackAnimInfo>()
         {
@@ -158,7 +158,7 @@ namespace TeslasuitAlyx
             }
         }
 
-        public TsFeedbackPlayer(IHapticAssetManager hapticAssetManager)
+        public TsFeedbackPlayer(IAssetManager hapticAssetManager)
         {
             this.m_assetManager = hapticAssetManager;
             ScanAnimations();
@@ -188,7 +188,7 @@ namespace TeslasuitAlyx
                     feedback.enabled = true;
                     if (feedback.hapticAsset == null && m_assetManager != null)
                     {
-                        feedback.hapticAsset = m_assetManager.Load(File.ReadAllBytes(animPath));
+                        feedback.hapticAsset = m_assetManager.Load(File.ReadAllBytes(animPath)) as IHapticAsset;
                         Console.WriteLine($"Animation loaded: {anims[i].Name}");
                     }
                     feedbackMap[feedback.feedbackType] = feedback;
@@ -212,7 +212,7 @@ namespace TeslasuitAlyx
                 }
                 if (CurrentPlayer != null && anim.hapticAsset != null)
                 {
-                    var playable = m_assetManager.GetPlayable(CurrentPlayer.Device, anim.hapticAsset);
+                    var playable = CurrentPlayer.Device.HapticPlayer.GetPlayable(anim.hapticAsset);
                     var multiplierPW = new TsHapticParamMultiplier(TsHapticParamType.PulseWidth, feedback.Multiplier);
                     var multiplierA = new TsHapticParamMultiplier(TsHapticParamType.Amplitude, feedback.Multiplier);
 
@@ -246,7 +246,7 @@ namespace TeslasuitAlyx
                 if (CurrentPlayer != null && anim.hapticAsset != null)
                 {
                     Console.WriteLine($"Stopping {anim.animName}");
-                    var playable = m_assetManager.GetPlayable(CurrentPlayer.Device, anim.hapticAsset);
+                    var playable = CurrentPlayer.Device.HapticPlayer.GetPlayable(anim.hapticAsset);
                     if (playable.IsPlaying)
                     {
                         CurrentPlayer.Stop(playable);
